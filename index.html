@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8"/>
+    <title>
+        JavaScript CRUD Example Tutorial
+    </title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1><center>Twitterみたいなwebアプリ</center></h1>
+	<hr>
+
+		<br/>
+		<div class = "employees-table">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>名前　</th>
+                            <th class="tweet">つぶやき　              　　　　　</th>
+                            <th>日付</th>
+                            <th>編集・削除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+        <br>
+        <br>
+        <div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>名前*</label><label class="validation-error hide" id="nameValidationError">This field is required.</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label>つぶやき</label>
+                        <input type="text" name="tweet" id="tweet">
+                    </div>
+ 
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="つぶやく">
+                    </div>
+                </form>
+		</div>
+    <br>
+        やること：ストレージに保存、作成日時で昇順か降順か選んでソートする機能
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
+</body>
+</html>
